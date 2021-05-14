@@ -10,7 +10,7 @@ package banking;
  * {@link #pin}: int<br>
  * {@link #balance}: double
  */
-public abstract class Account {
+public abstract class Account extends AccountHolder {
 	private AccountHolder accountHolder;
 	private Long accountNumber;
 	private int pin;
@@ -18,6 +18,7 @@ public abstract class Account {
 
 	protected Account(AccountHolder accountHolder, Long accountNumber, int pin, double startingDeposit) {
 		// complete the constructor
+		super(pin);
 	}
 
 	public AccountHolder getAccountHolder() {

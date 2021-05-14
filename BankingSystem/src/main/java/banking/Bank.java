@@ -1,6 +1,7 @@
 package banking;
 
 import java.util.LinkedHashMap;
+import java.util.Set;
 
 /**
  * Private Variables:<br>
@@ -16,17 +17,25 @@ public class Bank implements BankInterface {
 	private Account getAccount(Long accountNumber) {
 		// complete the function
 		
-        return null;
+        return  accounts.get(accountNumber);
 	}
 
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
 		// complete the function
-        return -1L;
+		 /*Set<Long> keySet = accounts.keySet();
+		 for(Long acct : keySet) {
+			   new Account
+		 }
+		*/
+		
+		return 1L;
+       
 	}
 
 	public Long openConsumerAccount(Person person, int pin, double startingDeposit) {
-		// complete the function
+
+     
         return -1L;
 	}
 
@@ -36,16 +45,18 @@ public class Bank implements BankInterface {
 	}
 
 	public double getBalance(Long accountNumber) {
-		// complete the function
-        return -1;
+		
+        return getAccount(accountNumber).getBalance();
 	}
 
 	public void credit(Long accountNumber, double amount) {
 		// complete the function
+		getAccount(accountNumber).creditAccount(amount);
 	}
 
 	public boolean debit(Long accountNumber, double amount) {
 		// complete the function
-        return true;
+	
+        return getAccount(accountNumber).debitAccount(amount);
 	}
 }

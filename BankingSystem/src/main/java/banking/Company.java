@@ -9,6 +9,6 @@ public class Company extends AccountHolder  {
 	}
 	public String getCompanyName() {
 		// complete the function
-        return null;
+        return companyName;
 	}
 }

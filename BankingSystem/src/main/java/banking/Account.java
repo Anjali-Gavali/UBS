@@ -38,15 +38,15 @@ public abstract class Account extends AccountHolder {
 
 	public Long getAccountNumber() {
 		// complete the function
-        return -accountNumber;
+        return accountNumber;
 	}
 
 	public void creditAccount(double amount) {
-		// complete the function
+		balance = getBalance() + amount;
 	}
 
 	public boolean debitAccount(double amount) {
 		// complete the function
-        return true;
+        return getBalance()>amount;
 	}
 }

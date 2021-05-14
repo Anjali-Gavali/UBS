@@ -22,6 +22,8 @@ public class CommercialAccount extends Account {
 	 */
 	protected void addAuthorizedUser(Person person) {
 		// complete the function
+		
+		authorizedUsers.add(person);
 	}
 
 	/**
@@ -30,6 +32,12 @@ public class CommercialAccount extends Account {
 	 */
 	public boolean isAuthorizedUser(Person person) {
 		// complete the function
-        return true;
+		for(Person p : authorizedUsers) {
+			
+			if(p == person) {
+				 return true;
+			}
+		}
+        return false;
 	}
 }

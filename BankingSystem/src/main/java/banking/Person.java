@@ -12,11 +12,11 @@ public class Person extends AccountHolder {
 
 	public String getFirstName() {
 		// complete the function
-        return null;
+        return firstName;
 	}
 
 	public String getLastName() {
 		// complete the function
-        return null;
+        return lastName;
 	}
 }

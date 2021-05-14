@@ -15,8 +15,10 @@ public class Bank implements BankInterface {
 
 	private Account getAccount(Long accountNumber) {
 		// complete the function
+		
         return null;
 	}
+
 
 	public Long openCommercialAccount(Company company, int pin, double startingDeposit) {
 		// complete the function
